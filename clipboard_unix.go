@@ -79,7 +79,7 @@ func newWrapper() *wrapper {
 		// Wayland
 		w.pasteCmdArgs = wlpasteArgs
 		w.copyCmdArgs = wlcopyArgs
-		w.copySecretArgs = append(wlcopyArgs, "--type", "x-kde-passwordManagerHint/secret")
+		w.copySecretArgs = append(wlcopyArgs, "--sensitive")
 		w.supported = true
 	case hasBinary(xclip):
 		// X11 (or Wayland) with xclip
